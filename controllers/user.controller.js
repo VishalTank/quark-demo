@@ -10,7 +10,7 @@ const createUser = async (req, res) => {
 		res.status(200).send({ user, token });
 	}
 	catch (err) {
-		res.status(500).send(err);
+		res.status(500).json({ errorMessage: 'User already exists' });
 	}
 }
 
